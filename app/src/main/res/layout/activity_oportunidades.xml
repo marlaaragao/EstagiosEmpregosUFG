@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:background="@color/branco">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Spinner
+            android:id="@+id/cursos"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:prompt= "@string/cursos_prompt"
+            android:touchscreenBlocksFocus="true"
+            android:dropDownWidth="fill_parent"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:popupBackground="#ffe2e3e8"
+            android:textColor="#ff0e18f3"
+            android:textSize = "20sp"
+            android:dropDownSelector="#ffd9dddf"
+        />
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical|center_horizontal">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/opoes"
+                android:checkedButton="@+id/estagio" >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/estagio"
+                    android:text="Estágio" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/emprego"
+                    android:text="Emprego" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pesquisa"
+                    android:text="Pesquisa" />
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv"
+        style="@style/Base.TextAppearance.AppCompat.Menu" />
+
+
+
+</LinearLayout>
